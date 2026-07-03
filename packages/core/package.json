@@ -1,0 +1,11 @@
+{
+  "name": "@execution-assistant/core",
+  "version": "1.0.0",
+  "description": "执行小助手跨端共享计算引擎",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  }
+}

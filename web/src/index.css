@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-cream text-gray-800 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-5 py-2.5 bg-navy text-white rounded-lg font-medium hover:bg-navy-light transition-colors disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  .btn-gold {
+    @apply px-5 py-2.5 bg-gold text-navy-dark rounded-lg font-bold hover:bg-gold-light transition-colors;
+  }
+  .btn-outline {
+    @apply px-5 py-2.5 border border-gray-300 text-gray-700 rounded-lg font-medium hover:border-navy hover:text-navy transition-colors;
+  }
+  .input-field {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy transition-colors;
+  }
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-100;
+  }
+  .label-text {
+    @apply block text-sm font-medium text-gray-600 mb-1;
+  }
+}
+
+/* 打印样式 */
+@media print {
+  aside, .print\:hidden { display: none !important; }
+  main { padding: 0 !important; background: white !important; overflow: visible !important; }
+  .card { box-shadow: none !important; border: none !important; }
+  pre { max-height: none !important; overflow: visible !important; }
+}

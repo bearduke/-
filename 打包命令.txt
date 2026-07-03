@@ -1,0 +1,15 @@
+打包命令记录
+============
+
+打包"执行小助手v22.exe"的命令：
+
+pyinstaller --onefile --windowed --icon=222.ico --name=执行小助手v22 app/main.py
+
+或者使用spec文件打包：
+
+pyinstaller 执行小助手v2.spec
+
+注意：
+1. 打包前确保已安装PyInstaller: pip install pyinstaller
+2. 打包完成后，exe文件会在 dist/ 目录下
+3. 如果需要修改输出文件名，可以在spec文件中修改 name='执行小助手v2' 为 name='执行小助手v22'
